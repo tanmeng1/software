@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>test1</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\谭梦\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.14\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      <script type="text/javascript" src="file:///c:\Users\谭梦\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.14\crossnote\dependencies\mermaid\mermaid.min.js" charset="UTF-8"></script>
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><html><head><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body></body></html>
+    </head>
+    <body for="html-export" >
+      <div class="crossnote markdown-preview  "  >
+      
+<h1 id="centerfond-face宋体-学生信息管理系统可行性研究报告-fondcenter"><center><fond face="宋体">“学生信息管理系统”可行性研究报告 </fond></center> </h1>
+<h2 id="一-引言">一、引言 </h2>
+<h3 id="11-背景">1.1 背景 </h3>
+ <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;随着教育信息化的不断推进，学生信息管理的重要性日益凸显。“学生信息管理系统”是一个可以为老师提供管理查看等需求的管理系统，能够帮助老师提高工作效率，减少工作时间。实现信息管理系统化、规范化、自动化，能够减少人力资源的投资。</p>
+<h3 id="12-目的">1.2 目的 </h3>
+ <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;编写本可行性研究报告的目的是为了更好的管理学生们的学籍信息，了解学生们的相关情况，为管理学生学习和生活进行指导，为学校的统一管理系统奠定基础。通过对学生学籍管理系统项目进行一系列的详细调查研究，明确了该系统项目的实现在技术、经济和社会因素方面的可行性，阐述为了合理地达到项目目标的实现报告，对软件开发中将要面临的问题及其解决方案进行可行性分析。</p>
+<h4 id="121-项目名称学生信息管理系统">1.2.1 项目名称：学生信息管理系统 </h4>
+<h4 id="122-用户学校的老师和工作人员以及全体学生">1.2.2 用户：学校的老师和工作人员以及全体学生 </h4>
+<h4 id="123-项目说明">1.2.3 项目说明 </h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;传统的学籍管理系统对于教学很重要，它是管理学生的一种手段，是必不可少的。所以学籍管理系统应该能够为用户提供充足的信息和快捷的查询手段。现今学生学籍管理的巨大的数据量给管理人员带来了诸多不便，教学管理缺少一种更加完善、灵活性更强、运行稳定、节省时间、正确率更高的学生学籍管理软件，为了学生档案的管理更加方便快捷，此项目应运而生，能帮助教研人员利用最新的开发工具，快速方便的对学生学籍管理进行管理、输入、输出、查找的所需操作，使散乱的学生档案能够具体化，直观化、合理化。</p>
+<p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<mark>传统的学籍管理方法由于管理不当，易发生数据丢失，速度慢。使用计算机可以高速快捷的完成以上工作。特别是计算机联网后，数据在网上传递，可以实现数据共享，规范教学管理行为，从而提高了管理效率和水平。学籍管理信息系统以计算机为工具，通过对教务管理所需的信息管理，把管理人员从繁琐的数据计算处理中解脱，从而全面提高教学质量。</mark></p><p></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这些优点能极大提高学生档案管理的效率。因此，开发这样一套学籍管理软件是很有必要的。</p>
+<h4 id="13可行性分析的四个方面">1.3可行性分析的四个方面 </h4>
+<ul>
+<li>
+<p>技术可行性：使用现有的技术能实现这个系统吗？</p>
+</li>
+<li>
+<p>经济可行性：这个系统的经济效益能超过它的开发成本吗？</p>
+</li>
+<li>
+<p>操作可行性：系统的操作方式在这个用户组织内行得通吗？</p>
+</li>
+<li>
+<p>社会因素可行性：系统开发过程中是否设计各种合同、侵权、责任等与法律、法规吻合或抵触的问题？</p>
+</li>
+</ul>
+<h4 id="14参考资料">1.4参考资料 </h4>
+<p>《软件工程导论（第六版）》张海藩编著 清华大学出版<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<h2 id="二-可行性研究的前提">二、可行性研究的前提 </h2>
+<h3 id="21要求">2.1要求 </h3>
+<h4 id="211功能要求">2.1.1功能要求 </h4>
+<p>　　学生学籍管理系统主要用于学校学生学籍的管理，其主要任务是用计算机对学生学籍进行日常管理，&nbsp;如查询、修改、增加、删除等基本操作。因此，此系统所要完成的功能主要有：学生基础信息管理、学生异动管理、毕业生信息管理等多项管理功能等进行综合管理和快速查询。</p>
+<h4 id="212性能要求">2.1.2性能要求 </h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为了能够为用户提供充足的信息和快捷的查询手段，用户使用时系统要保证运行稳定、效率高，能够快速做出响应，迅速处理各项数据、信息，显示出所需信息，所以要有一定的可扩展性和灵活性，尽可能的简化用户的操作。</p>
+<h4 id="213输入-输出要求">2.1.3输入、输出要求 </h4>
+<ul>
+<li>
+<p>输入要求：用户可以使用该系统的学生入学、退学、升级等功能；也可以根据所掌握的信息进行人工录入和修改。</p>
+</li>
+<li>
+<p>输出要求：因查询结果可输出为Excel、Word等形式。</p>
+</li>
+</ul>
+<h4 id="214基本的数据流程和处理流程">2.1.4基本的数据流程和处理流程 </h4>
+<div class="mermaid">graph LR;
+    数据库--&gt;学籍管理系统;
+    学籍管理系统--&gt;输入模块;
+    输入模块--&gt;各个角色;
+    学籍管理系统--&gt;输出模块;
+    输出模块--&gt;打印;
+    输出模块--&gt;查询信息;
+</div><h4 id="215安全与保密要求">2.1.5安全与保密要求 </h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于学生信息机密性高，应该对学生的各种信息加以保密，保证系统防火墙的可靠性；由于查询人员的身份和目的不同，系统应该提高不同的查询权限。</p>
+<h3 id="22系统目标">2.2系统目标 </h3>
+<h4 id="221模块目标">2.2.1模块目标： </h4>
+<p>1、成绩管理：包括学生成绩管理（课程号、课程名、学号、成绩）的添加、更改、删除和查询（按学号、班级和查询全部）等功能。</p>
+<p>2、学籍管理：包括学生基本信息管理。其中学生基本信息管理包括学生基本信息（学生编号、姓名、性别、所在专业等）的添加、更改、删除和查询。</p>
+<p>3、班级管理：班级添加、班级修改、班级查询等功能。</p>
+<p>4、课程管理：包括课程信息（课程号、课程名称和授课老师）的添加和删除。</p>
+<p>5、打印管理：包括输出学生的成绩单和选课情况等。</p>
+<div class="mermaid">graph TD;
+    学生学籍管理系统--&gt;学籍管理功能;
+    学生学籍管理系统--&gt;班级管理系统;
+    学生学籍管理系统--&gt;课程管理系统;
+    学生学籍管理系统--&gt;成绩管理系统;
+    学生学籍管理系统--&gt;打印管理;
+    学籍管理功能--&gt;学籍添加;
+    学籍管理功能--&gt;学籍修改;
+    学籍管理功能--&gt;学籍查询;
+    班级管理系统--&gt;班级添加;
+    班级管理系统--&gt;班级修改;
+    班级管理系统--&gt;班级查询;
+    课程管理系统--&gt;课程添加;
+    课程管理系统--&gt;课程修改;
+    课程管理系统--&gt;课程查询;
+    成绩管理系统--&gt;成绩添加;
+    成绩管理系统--&gt;成绩修改;
+    成绩管理系统--&gt;成绩查询;
+    打印管理--&gt;成绩单打印;
+    打印管理--&gt;选课打印;    
+</div><h3 id="23需求分析">2.3需求分析 </h3>
+<h4 id="231性能需求">2.3.1性能需求 </h4>
+<p>1.&nbsp;系统响应速度快，能够满足大量用户同时访问的需求。<br>
+2.&nbsp;数据存储安全可靠，防止数据丢失和损坏。</p>
+<h4 id="232用户界面需求">2.3.2用户界面需求 </h4>
+<p>1.&nbsp;界面简洁直观，易于操作。<br>
+2.&nbsp;提供友好的提示信息和错误处理机制。</p>
+<h3 id="24可行性研究方法">2.4可行性研究方法 </h3>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;采用的问卷调查的方法：制定出调查问卷，首先在网络上用问卷星发布了调查问卷，同时在本校进行相关调查，在调查过程中，项目组分别与老师、学生等进行了深入的交流与统计，发现他们对现有系统的功能等方面有很多顾虑。所以，问卷调查之后，经过仔细分析需求，项目组及时总结了调查对象的顾虑，针对他们的顾虑，提出了系统的结构分析，最后确定了解决方案。</p>
+<h2 id="三-技术可行性分析">三、技术可行性分析 </h2>
+<h3 id="31对系统的简要描述">3.1对系统的简要描述 </h3>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;新系统在原有系统的基础上运用了新的数据库，采取先进的数据库技术与数据管理技术，使数据的准确性与安全性得到了很大的提高，且在用户的并行操作与用户管理方面也有了极大地改善。系统现阶段的发展过程中，利用现有人力和物力是完全具备的能力开发出来的，作为阶段性产品，日后的发展空间大，实现方法逐步简单容易，而且市场上已有基础的管理系统，所以管理系统的技术上是完全可行的。</p>
+<h3 id="32技术架构">3.2技术架构 </h3>
+<p>1.&nbsp;选择合适的开发语言和数据库管理系统，如 Java 和 MySQL。<br>
+2.&nbsp;采用 B/S 架构，方便用户通过浏览器访问系统。</p>
+<h3 id="33技术难点及解决方案">3.3技术难点及解决方案 </h3>
+<p>1.&nbsp;数据安全问题：采用加密技术、访问控制等措施确保数据安全。<br>
+2.&nbsp;性能优化：优化数据库查询语句、采用缓存技术等提高系统性能。</p>
+<h3 id="34采用新系统可能带来的影响">3.4采用新系统可能带来的影响 </h3>
+<ul>
+<li>
+<p><mark>对设备的影响</mark><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;采用新系统后，改进了原有系统的性能和属性，所以对设备的要求自然更高，系统应该使用先进的技术，设备也必须跟着。</p>
+</li>
+<li>
+<p><mark>对现有软件的影响</mark><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;新系统采用了先进的数据库技术以及一系列高技术含量软件，使得原来系统上的一些软件无法继续使用，不过新系统将具备一定的软件兼容性。</p>
+</li>
+<li>
+<p><mark>对用户的影响</mark><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;新的系统在于优化算法让用户拥有更好的体验，但是操作的方式并不会有太大的变化，不会让用户产生陌生感。新系统是在原有的软件基础上进一步的升级与扩展，并且可操作性强，只需要对原来的人员进行简单的培训即可。</p>
+</li>
+<li>
+<p><mark>对系统运行的影响</mark><br>
+1.用户操作：将本系统安装在计算机的任意位置，按照指示操作；</p>
+<p>2.源数据的处理：保存后处理；</p>
+<p>3.系统失效的恢复办法：结束当前任务或重新启动计算机。</p>
+</li>
+<li>
+<p><mark>对运行环境的影响</mark><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;系统设计时考虑到用户使用时，应力求操作简单，查询<br>
+方便，存储快捷，软件设计采用菜单选取方式。</p>
+</li>
+<li>
+<p><mark>对经费支出的影响</mark><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;因为新系统采用了最新的工具和软件，用户使用时若提高计算机的配置，可把新系统发挥到最高端的状态；不过新系统功能强大，适用于当前的大多操作系统。建议系统是为了改善原有系统在经费支出过高的缺点的，所以新系统一经使用在经费支出方面一定会得到很好的改善，用户在使用了新系统后只需要花一定资金购买一部分计算机与软件就能实现自动化。<br>
+技术可行性评价</p>
+</li>
+</ul>
+<h3 id="35技术可行性评价">3.5技术可行性评价 </h3>
+<p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当前信息行业发展迅速，基于互联网和Windows操作的系统，在一定的软硬件设备的支持下，有原系统作辅，而且学校大力支持，新系统中的功能目标可以实现；开发人员需要5人，有一定的系统开发经验，校内已有这样的团队，可以满足；预计完成期限五个月，对开发此系统来说已经足够；利用现有的技术在规定的期限内开发工作基本能够完成，所以系统在技术方面是可行的。</p>
+<h2 id="四-经济可行性分析p">四、经济可行性分析<p></p> </h2>
+<h3 id="41开发成本">4.1开发成本 </h3>
+<p>1.&nbsp;硬件设备采购费用。<br>
+2.&nbsp;软件开发费用，包括人员工资、培训费用等。<br>
+3.&nbsp;系统维护费用。</p>
+<h3 id="42效益分析">4.2效益分析 </h3>
+<p>1.&nbsp;提高管理效率，减少人力成本。<br>
+2.&nbsp;提供准确的数据分析，为学校决策提供支持。<br>
+3.&nbsp;增强学校的信息化管理水平，提升学校形象。</p>
+<h2 id="五-风险分析及应对策略">五、风险分析及应对策略 </h2>
+<h3 id="51技术风险">5.1技术风险 </h3>
+<h4 id="511技术更新换代快可能导致系统落后">5.1.1技术更新换代快，可能导致系统落后。 </h4>
+<ul>
+<li><mark>应对策略：定期对系统进行升级和维护，关注技术发展动态。</mark></li>
+</ul>
+<h4 id="512开发过程中可能遇到技术难题影响项目进度">5.1.2开发过程中可能遇到技术难题，影响项目进度。 </h4>
+<ul>
+<li><mark>应对策略：加强技术团队建设，提前做好技术储备。</mark></li>
+</ul>
+<h3 id="52需求变更风险">5.2需求变更风险 </h3>
+<h4 id="521用户需求可能发生变化导致系统功能需要调整">5.2.1用户需求可能发生变化，导致系统功能需要调整。 </h4>
+<ul>
+<li><mark>应对策略：建立良好的沟通机制，及时了解用户需求变化，进行需求变更管理。</mark></li>
+</ul>
+<h3 id="53安全风险">5.3安全风险 </h3>
+<h4 id="531系统可能面临网络攻击-数据泄露等安全风险">5.3.1系统可能面临网络攻击、数据泄露等安全风险。 </h4>
+<ul>
+<li><mark>应对策略：加强系统安全防护，定期进行安全检测和漏洞修复。</mark></li>
+</ul>
+<h2 id="六-结论意见">六、结论意见 </h2>
+<p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;经过研究发现，基本上所有的学校都很需要甚至是依赖学籍管理系统来支持学校工作的日常运行，而本系统具有成本低、方便快捷、操作简单、对于使用者技术要求低等优势，使得学生学籍实现电子化管理，符合社会信息化发展的需要，技术实力达标，在法律方面也可行，有着广阔的前景。</p><p></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;学生学籍管理系统技术在目前是一个技术上成熟的系统，并且在学校内部准备采取有力措施保证资金和人员配置，本项目方便快捷，投资回报利益大，因此，开发“学生学籍管理系统”的项目是可行的；为了使学校更好的适应现代化高科技产品，符合社会信息化发展的需求，促进学籍管理信息化，不断满足管理人员的要求，争取更好的经济效益，建议立即准备本系统的开发。</p>&nbsp;
+因此，编写一个学生管理系统可以为学校办公管理提供一个快速、简单规范的管理平台，使学院在学生信息管理方面更加规范化,快捷化。
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>《软件工程导论（第六版）》张海藩编著 清华大学出版 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+      </div>
+      
+      
+    </body>
+    
+    <script type="module">
+// TODO: If ZenUML gets integrated into mermaid in the future,
+//      we can remove the following lines.
+
+
+var MERMAID_CONFIG = ({"startOnLoad":false});
+if (typeof MERMAID_CONFIG !== 'undefined') {
+  MERMAID_CONFIG.startOnLoad = false
+  MERMAID_CONFIG.cloneCssStyles = false
+  MERMAID_CONFIG.theme = "default"
+}
+
+mermaid.initialize(MERMAID_CONFIG || {})
+if (typeof(window['Reveal']) !== 'undefined') {
+  function mermaidRevealHelper(event) {
+    var currentSlide = event.currentSlide
+    var diagrams = currentSlide.querySelectorAll('.mermaid')
+    for (var i = 0; i < diagrams.length; i++) {
+      var diagram = diagrams[i]
+      if (!diagram.hasAttribute('data-processed')) {
+        mermaid.init(null, diagram, ()=> {
+          Reveal.slide(event.indexh, event.indexv)
+        })
+      }
+    }
+  }
+  Reveal.addEventListener('slidetransitionend', mermaidRevealHelper)
+  Reveal.addEventListener('ready', mermaidRevealHelper)
+  await mermaid.run({
+    nodes: document.querySelectorAll('.mermaid')
+  })
+} else {
+  await mermaid.run({
+    nodes: document.querySelectorAll('.mermaid')
+  })
+}
+</script>
+    
+    
+    
+  </html>
