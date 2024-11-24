@@ -1,0 +1,100 @@
+@startuml 类图
+' 学生类
+class Student {
+    - studentId: int
+    - name: String
+    - age: int
+    - gender: String
+    - contactInfo: String
+    + getStudentId(): int
+    + setStudentId(int id): void
+    + getStudentName(): String
+    + setStudentName(String name): void
+    + getStudentAge(): int
+    + setStudentAge(int age): void
+    + getGender(): String
+    + setGender(String gender): void
+    + getContactInfo(): String
+    + setContactInfo(String info): void
+}
+
+' 班级类
+class Class {
+    - classId: int
+    - className: String
+    - teacher: Teacher
+    - students: List<Student>
+    + getClassId(): int
+    + setClassId(int id): void
+    + getClassName(): String
+    + setClassName(String name): void
+    + addStudent(Student s): void
+    + removeStudent(Student s): void
+    + getTeacher(): Teacher
+    + setTeacher(Teacher t): void
+}
+
+' 教师类     
+class Teacher {
+    - teacherId: int
+    - name: String
+    - teachingSubjects: List<Course>
+    + getTeacherId(): int
+    + setTeacherId(int id): void
+    + getTeacherName(): String
+    + setTeacherName(String name): void
+    + addTeachingSubject(Course c): void
+    + removeTeachingSubject(Course c): void
+}
+
+' 课程类
+class Course {
+    - courseId: int
+    - courseName: String
+    - credit: int
+    - description: String
+    - prerequisiteCourses: List<Course>
+    + getCourseId(): int
+    + setCourseId(int id): void
+    + getCourseName(): String
+    + setCourseName(String name): void
+    + getCredit(): int
+    + setCredit(int credit): void
+    + getDescription(): String
+    + setDescription(String desc): void
+    + addPrerequisite(Course c): void
+    + removePrerequisite(Course c): void
+}
+
+' 选课记录类
+class Enrollment {
+    - enrollmentId: int
+    - student: Student
+    - course: Course
+    - grade: double
+    + getEnrollmentId(): int
+    + setEnrollmentId(int id): void
+    + enrollStudent(Student s, Course c): void
+    + dropCourse(Student s, Course c): void
+    + setGrade(double grade): void
+    + getGrade(): double
+}
+
+' 学生与班级的关联关系（多对一）
+Student "1" -- "*" Class : belongs to
+
+' 班级与教师的关联关系（一对一，一个班级对应一个班主任之类）
+Class "1" -- "1" Teacher : taught by
+
+' 教师与课程的关联关系（多对多，一个教师可以教多门课，一门课可以有多个教师教）
+Teacher "*" -- "*" Course : teaches
+
+' 学生与选课记录的关联关系（多对多，一个学生可以选多门课，一门课可以被多个学生选）
+Student "*" -- "*" Enrollment : enrolls
+
+' 课程与选课记录的关联关系（多对多）
+Course "*" -- "*" Enrollment : is enrolled in
+
+' 课程之间的关联关系（一门课可能有多门先修课程）
+Course "*" -- "*" Course : has prerequisite
+@enduml

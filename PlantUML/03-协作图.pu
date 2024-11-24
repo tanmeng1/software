@@ -1,0 +1,44 @@
+@startuml 协作图
+title 学生管理系统协作图
+
+actor Student as S
+actor Teacher as T
+actor Administrator as A
+
+S --> LoginSystem : 登录请求
+alt 登录成功
+    LoginSystem --> Database : 验证账号密码
+    Database --> LoginSystem : 返回验证结果
+    LoginSystem --> S : 登录成功反馈
+else 登录失败
+    LoginSystem --> S : 登录失败反馈
+end
+
+T --> QuerySystem : 查询学生信息请求
+alt 查询成功
+    QuerySystem --> Database : 获取学生信息
+    Database --> QuerySystem : 返回学生信息
+    QuerySystem --> T : 展示学生信息
+else 查询失败
+    QuerySystem --> T : 查询失败反馈
+end
+
+T --> GradeSystem : 修改学生成绩请求
+alt 修改成功
+    GradeSystem --> Database : 更新成绩数据
+    Database --> GradeSystem : 确认更新
+    GradeSystem --> T : 反馈修改结果
+else 修改失败
+    GradeSystem --> T : 修改失败反馈
+end
+
+A --> ManageSystem : 管理学生账号请求（添加/删除等）
+alt 操作成功
+    ManageSystem --> Database : 执行账号相关操作
+    Database --> ManageSystem : 返回操作结果
+    ManageSystem --> A : 反馈管理情况
+else 操作失败
+    ManageSystem --> A : 管理失败反馈
+end
+
+@enduml
