@@ -1,0 +1,39 @@
+@startuml 添加学生
+actor 用户 as user
+boundary 添加学生边界 as addStudentB
+control 添加学生控制 as addStudentC
+entity 学生数据库 as studentDB
+
+user -> addStudentB : 1. 输入学生信息（姓名、年龄等）
+activate user #FFBBBB
+activate addStudentB #cccccc
+
+addStudentB -> addStudentC : 2. 提交学生信息
+deactivate user
+activate addStudentC #FFBBBB
+deactivate addStudentB
+
+addStudentC -> addStudentC : 3. 验证输入信息  
+activate addStudentC #FFBBBB
+deactivate addStudentC
+
+alt 输入无效
+    addStudentC -> user : 4. 返回错误信息（字段不能为空或学号已存在）
+else 输入有效
+    addStudentC -> studentDB : 5. 存储学生信息
+    activate studentDB #FFBBBB
+    deactivate addStudentC
+    deactivate studentDB
+
+    studentDB -> addStudentC : 6. 返回存储成功确认
+    activate studentDB #FFBBBB
+    activate addStudentC #FFBBBB
+    deactivate studentDB 
+    deactivate addStudentC
+
+    addStudentC -> user : 7. 返回成功信息（添加成功）
+    activate user #FFBBBB
+    deactivate user
+end
+
+@enduml

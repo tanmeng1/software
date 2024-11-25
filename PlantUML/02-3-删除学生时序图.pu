@@ -1,0 +1,46 @@
+@startuml 删除学生
+actor 用户 as user
+boundary 删除学生边界 as deleteStudentB
+control 删除学生控制 as deleteStudentC
+entity 学生数据库 as studentDB
+
+user -> deleteStudentB : 1. 输入学生学号
+activate user #FFBBBB
+activate deleteStudentB #cccccc
+
+deleteStudentB -> deleteStudentC : 2. 提交学生学号
+deactivate user
+activate deleteStudentC #FFBBBB
+deactivate deleteStudentB
+
+deleteStudentC -> studentDB : 3. 查询学生信息
+activate studentDB #FFBBBB
+deactivate deleteStudentC
+
+studentDB -> deleteStudentC : 4. 返回学生信息
+activate studentDB #FFBBBB
+activate deleteStudentC #FFBBBB
+deactivate studentDB 
+deactivate deleteStudentC
+
+alt 学生存在
+    deleteStudentC -> studentDB : 5. 删除学生信息
+    activate studentDB #FFBBBB
+    deactivate deleteStudentC
+
+    studentDB -> deleteStudentC : 6. 返回删除成功确认
+    activate studentDB #FFBBBB
+    activate deleteStudentC #FFBBBB
+    deactivate studentDB 
+    deactivate deleteStudentC
+
+    deleteStudentC -> user : 7. 返回成功信息（删除成功）
+    activate user #FFBBBB
+    deactivate user
+else 学生不存在
+    deleteStudentC -> user : 5. 返回错误信息（学生不存在）
+    activate user #FFBBBB
+    deactivate user
+end
+
+@enduml

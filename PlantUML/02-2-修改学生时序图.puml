@@ -1,0 +1,51 @@
+@startuml 修改学生
+actor 用户 as user
+boundary 修改学生边界 as modifyStudentB
+control 修改学生控制 as modifyStudentC
+entity 学生数据库 as studentDB
+
+user -> modifyStudentB : 1. 输入学生信息（学号）
+activate user #FFBBBB
+activate modifyStudentB #cccccc
+
+modifyStudentB -> modifyStudentC : 2. 提交学生学号
+deactivate user
+activate modifyStudentC #FFBBBB
+deactivate modifyStudentB
+
+modifyStudentC -> studentDB : 3. 查询学生信息
+activate studentDB #FFBBBB
+deactivate modifyStudentC
+
+studentDB -> modifyStudentC : 4. 返回学生信息
+activate studentDB #FFBBBB
+activate modifyStudentC #FFBBBB
+deactivate studentDB 
+deactivate modifyStudentC
+
+modifyStudentC -> modifyStudentB : 5. 显示当前学生信息
+activate modifyStudentB #cccccc
+deactivate modifyStudentC
+
+user -> modifyStudentB : 6. 输入修改后的学生信息
+activate user #FFBBBB
+
+modifyStudentB -> modifyStudentC : 7. 提交修改后的学生信息
+deactivate user
+activate modifyStudentC #FFBBBB
+deactivate modifyStudentB
+
+modifyStudentC -> studentDB : 8. 更新学生信息
+activate studentDB #FFBBBB
+deactivate modifyStudentC
+
+studentDB -> modifyStudentC : 9. 返回更新成功确认
+activate studentDB #FFBBBB
+activate modifyStudentC #FFBBBB
+deactivate studentDB 
+deactivate modifyStudentC
+
+modifyStudentC -> user : 10. 返回成功信息（修改成功）
+activate user #FFBBBB
+deactivate user
+@enduml

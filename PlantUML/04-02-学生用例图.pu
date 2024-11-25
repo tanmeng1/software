@@ -1,0 +1,22 @@
+@startuml 用例图
+title 学生用例图
+
+actor "学生" as Student
+
+rectangle "学生管理系统" {
+    (查询课程) as UC1
+    (选课) as UC2
+    (查看已选课程) as UC3
+    (查看个人成绩) as UC4
+    (提交请假申请) as UC5
+    (查看学生活动) as UC6
+}
+
+Student --> UC1
+Student --> UC2
+Student --> UC3
+Student --> UC4
+Student --> UC5
+Student --> UC6
+
+@enduml

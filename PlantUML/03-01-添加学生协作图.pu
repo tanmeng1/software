@@ -1,0 +1,21 @@
+@startuml 协作图
+title 添加学生流程协作图
+
+participant "管理员" as Administrator
+participant "学生管理系统" as StudentSystem
+participant "数据库" as Database
+
+Administrator -> StudentSystem : 1: 输入学生信息（如姓名、学号、班级）
+StudentSystem -> Administrator : 2: 确认信息完整性（请求确认）
+Administrator -> StudentSystem : 3: 确认提交添加请求
+StudentSystem -> StudentSystem : 4: 验证学生信息（检查学号是否已存在）
+
+alt 信息验证通过
+    StudentSystem -> Database : 5: 保存学生信息到数据库
+    Database -> StudentSystem : 6: 返回保存结果（成功）
+    StudentSystem -> Administrator : 7: 返回添加结果（成功提示）
+else 信息验证失败
+    StudentSystem -> Administrator : 8: 返回添加结果（失败提示，说明原因）
+end
+
+@enduml

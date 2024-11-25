@@ -1,0 +1,23 @@
+@startuml 协作图
+title 修改学生信息流程
+
+participant "管理员" as Administrator
+participant "学生管理系统" as StudentSystem
+participant "数据库" as Database
+
+Administrator -> StudentSystem : 1: 输入要修改的学生信息（学号等）
+StudentSystem -> Database : 2: 查询学生信息（根据学号）
+Database -> StudentSystem : 3: 返回学生信息
+StudentSystem -> Administrator : 4: 显示当前学生信息（让管理员确认）
+Administrator -> StudentSystem : 5: 修改学生信息（如姓名、班级等）
+StudentSystem -> StudentSystem : 6: 验证修改后的学生信息（检查完整性）
+
+alt 信息验证通过
+    StudentSystem -> Database : 7: 更新学生信息到数据库
+    Database -> StudentSystem : 8: 返回更新结果（成功）
+    StudentSystem -> Administrator : 9: 返回修改结果（成功提示）
+else 信息验证失败
+    StudentSystem -> Administrator : 10: 返回修改结果（失败提示，说明原因）
+end
+
+@enduml

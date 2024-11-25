@@ -1,0 +1,21 @@
+@startuml 用例图
+title 教师用例图
+
+actor "教师" as Teacher
+rectangle "学生管理系统" {
+    (录入成绩) as UC1
+    (修改成绩) as UC2
+    (查看学生信息) as UC3
+    (查看课程信息) as UC4
+    (发布课程通知) as UC5
+    (参与学生活动) as UC6
+}
+
+Teacher --> UC1
+Teacher --> UC2
+Teacher --> UC3
+Teacher --> UC4
+Teacher --> UC5
+Teacher --> UC6
+
+@enduml
