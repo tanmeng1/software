@@ -1,0 +1,36 @@
+@startuml 序列图
+participant 学生 as Student
+participant 系统界面 as SystemUI
+participant 认证服务 as AuthService
+participant 成绩服务 as GradeService
+participant 成绩数据库 as GradeDB
+
+== 学生登录 ==
+Student -> SystemUI: 输入学号和密码，请求登录
+activate SystemUI
+SystemUI -> AuthService: 验证学号和密码
+activate AuthService
+AuthService -> SystemUI: 返回登录结果（成功）
+deactivate AuthService
+SystemUI -> Student: 显示登录成功消息
+deactivate SystemUI
+
+== 学生查看成绩 ==
+activate Student
+Student -> SystemUI: 请求查看成绩
+activate SystemUI
+SystemUI -> GradeService: 请求获取学生成绩
+activate GradeService
+GradeService -> GradeDB: 查询学生成绩（使用学号作为键）
+activate GradeDB
+GradeDB -> GradeService: 返回学生成绩列表
+deactivate GradeDB
+GradeService -> SystemUI: 返回学生成绩列表
+deactivate GradeService
+SystemUI -> Student: 显示学生成绩列表
+deactivate SystemUI
+
+Student -> SystemUI: 确认查看
+deactivate Student
+
+@enduml

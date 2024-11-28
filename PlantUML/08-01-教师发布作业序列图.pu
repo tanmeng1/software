@@ -1,0 +1,43 @@
+@startuml 序列图
+participant Teacher as "老师"
+participant SMS as "学生管理系统\n(SMS)"
+participant AssignmentDB as "作业数据库\n(AssignmentDB)"
+
+== 老师登录系统 ==
+Teacher -> SMS: 发送登录请求（用户名: 工号, 密码）
+SMS -> Teacher: 返回登录响应（成功/失败）
+activate SMS
+
+alt 登录成功
+    SMS -> Teacher: 展示系统操作界面
+    deactivate SMS
+
+    == 老师选择课程并发布作业 ==
+    activate Teacher
+    Teacher -> SMS: 请求查看可发布作业的课程列表
+    SMS -> Teacher: 返回课程列表及详情
+    Teacher -> SMS: 选择特定课程以发布作业
+
+    == 填写并提交作业信息 ==
+    Teacher -> SMS: 输入作业详情（标题, 描述, 截止日期等）
+    note left of Teacher: 填写必要的作业发布信息
+
+    == 系统处理作业信息 ==
+    activate SMS
+    SMS -> AssignmentDB: 发送存储作业请求（课程ID, 作业详情）
+    activate AssignmentDB
+    AssignmentDB -> SMS: 返回作业存储状态（成功/失败）
+    deactivate AssignmentDB
+
+    == 反馈作业发布结果 ==
+    SMS -> Teacher: 展示作业发布结果（成功/失败及原因）
+    note right of SMS: 通知老师作业是否已成功发布
+    deactivate SMS
+
+else 登录失败
+    Teacher -> SMS: 接收并显示登录错误信息
+    deactivate SMS
+    note right of Teacher: 检查登录信息并重试或联系管理员
+end
+
+@enduml
